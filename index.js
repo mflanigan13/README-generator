@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
@@ -6,7 +6,7 @@ const util = require('util');
 // linking to page where the README is developed 
 const generatePage = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -87,7 +87,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -100,7 +100,7 @@ function writeToFile(fileName, data) {
 
 const writeFileAsync = util.promisify(writeToFile);
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 async function init() {
     try {
 
@@ -108,15 +108,6 @@ async function init() {
         const userResponses = await inquirer.prompt(questions);
         console.log("Your responses: ", userResponses);
         console.log("Thank you for your responses! Generatoring your README next...");
-    
-        // // Call GitHub api for user info
-        // const userInfo = await api.getUser(userResponses);
-        // console.log("Your GitHub user info: ", userInfo);
-    
-        // // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
-        // console.log("Generating your README next...")
-        // const markdown = generateMarkdown(userResponses, userInfo);
-        // console.log(markdown);
     
         // Write markdown to file
         await writeFileAsync('ExampleREADME.md', markdown);
