@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // linking to page where the README is developed 
 const generatePage = require('./utils/generateMarkdown.js');
@@ -108,8 +109,9 @@ async function init() {
         const userResponses = await inquirer.prompt(questions);
         console.log("Your responses: ", userResponses);
         console.log("Thank you for your responses! Generatoring your README next...");
-    
+        
         // Write markdown to file
+        const markdown = generateMarkdown(userResponses);
         await writeFileAsync('ExampleREADME.md', markdown);
 
     } catch (error) {

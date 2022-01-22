@@ -46,7 +46,7 @@ function renderLicenseSection(license) {
     * [Description](#description)
     * [Installation](#installation)
     * [Usage](#usage)
-    ${renderLicenseTOC(data.license)}
+    ${renderLicenseLink(data.license)}
     * [Contributing](#contributing)
     * [Tests](#tests)
     * [Questions](#questions)
