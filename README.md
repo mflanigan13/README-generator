@@ -30,8 +30,8 @@ To test this app, open up the file in VS Code. Open the terminal, change directo
 
 ## Questions
  Please contact me using the following links:
-    [GitHub](https://github.com/mflangian13)
-    [Email: undefined](mailto:mflanigantwualumn@gmail.com)
+   * [GitHub](https://github.com/mflangian13)
+   * [Email](mailto:mflanigantwualumn@gmail.com)
 
 
 
