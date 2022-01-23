@@ -67,9 +67,9 @@ function renderLicenseSection(license) {
     ${renderLicenseSection(data.license)}
     ## [Contributing](#table-of-contents)
     
-    ${renderContributingSection(data.confirmContributers, data.contribute)}
     ## [Tests](#table-of-contents)
     ${data.test}
+    
     ## [Questions](#table-of-contents)
     Please contact me using the following links:
     [GitHub](https://github.com/${data.githubUsername})
